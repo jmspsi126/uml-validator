@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='container'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed md-show fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block field'
+            type='text' />
+          <div id='toc'>
+              <a
+                href='#validators'
+                class='block bold'>
+                validators
+              </a>
+                <a
+                  href='#validators.email'
+                  class='regular block'>
+                  .email
+                </a>
+                <a
+                  href='#validators.required'
+                  class='regular block'>
+                  .required
+                </a>
+              <a
+                href='#messages'
+                class='block bold'>
+                messages
+              </a>
+              <a
+                href='#Options'
+                class='block bold'>
+                Options
+              </a>
+              <a
+                href='#Rules'
+                class='block bold'>
+                Rules
+              </a>
+              <a
+                href='#validate'
+                class='block bold'>
+                validate
+              </a>
+              <a
+                href='#Validator'
+                class='block bold'>
+                Validator
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        <div class='px2'>
+<div class='py1'><section class='py2 clearfix'>
+  <h2 id='validators' class='mt0'>
+    validators<span class='gray'></span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>Contains built-in validator functions.</p>
+
+      <h4>Static members</h4>
+        <div class='collapsible' id='validators.email'>
+          <a href='#validators.email'>
+            <code>
+              .email<span class='gray'>(value, [options])</span>
+            </code>
+            <div class='force-inline'>
+              <p>The value must be an email.</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+<section class='py2 clearfix'>
+  <h2 id='validators.email' class='mt0'>
+    email<span class='gray'>(value, [options])</span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>The value must be an email.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li>Any
+ <strong>value</strong>
+          :
+          <div class='force-inline'>
+            <p>[description]</p>
+
+          </div>
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>
+=
+(default true)
+ <strong>options</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code>(
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>
+|
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+)
+</code>
+      
+      <div class='force-inline'>
+        
+      </div>
+</section>
+          </div>
+        </div>
+        <div class='collapsible' id='validators.required'>
+          <a href='#validators.required'>
+            <code>
+              .required<span class='gray'>(value, [options])</span>
+            </code>
+            <div class='force-inline'>
+              <p>The value must not be empty.</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2 m2'>
+<section class='py2 clearfix'>
+  <h2 id='validators.required' class='mt0'>
+    required<span class='gray'>(value, [options])</span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>The value must not be empty.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li>Any
+ <strong>value</strong>
+          :
+          <div class='force-inline'>
+            <p>[description]</p>
+
+          </div>
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>
+=
+(default true)
+ <strong>options</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code>(
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>
+|
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+)
+</code>
+      
+      <div class='force-inline'>
+        
+      </div>
+</section>
+          </div>
+        </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='messages' class='mt0'>
+    messages<span class='gray'></span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>Contains built-in error messages.</p>
+
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='Options' class='mt0'>
+    Options<span class='gray'></span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>Options that can be passed to <a href="#validate">validate()</a></p>
+
+    <h4>Properties</h4>
+    <ul class='suppress-p-margin'>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+ <strong>validators</strong>
+              :
+              <div class='force-inline'>
+                <p>An object containing key/function pairs of the validator name and the function. Built-in validators can be overriden here.</p>
+
+              </div>
+            </li>
+    </li>
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> options = {
+    validators:{
+        customValidator: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value, options = true</span>)</span>{
+          <span class="hljs-keyword">if</span>(options === <span class="hljs-literal">true</span>){
+              <span class="hljs-keyword">if</span>(value === <span class="hljs-string">""</span>){
+                  <span class="hljs-keyword">return</span> messages[<span class="hljs-string">'required'</span>]
+              }
+          }
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        },
+    },
+};
+<span class="hljs-keyword">var</span> rules = {
+    validate:<span class="hljs-literal">true</span>,
+    customValidator:<span class="hljs-literal">true</span>,
+};
+validate(<span class="hljs-string">"example"</span>, rules, options);</pre>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='Rules' class='mt0'>
+    Rules<span class='gray'></span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>An object containing validation rules.</p>
+
+    <h4>Properties</h4>
+    <ul class='suppress-p-margin'>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>
+ <strong>validate</strong>
+              :
+              <div class='force-inline'>
+                <p>Required attribute. Must be set to true for any validation to occur.</p>
+
+              </div>
+            </li>
+        <li>Any
+ <strong>rules</strong>
+              :
+              <div class='force-inline'>
+                <p>Key/value pairs of the validator name and the options to pass to the validator.</p>
+
+              </div>
+            </li>
+    </li>
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> rules = {
+    validate:<span class="hljs-literal">true</span>,
+    email:<span class="hljs-literal">true</span>,
+};
+validate(<span class="hljs-string">"example"</span>, rules); <span class="hljs-comment">//returns with an error message</span>
+validate(<span class="hljs-string">"example@example.com"</span>, rules); <span class="hljs-comment">//returns true</span></pre>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='validate' class='mt0'>
+    validate<span class='gray'>(objectOrValue, rules, options)</span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>Validates an object or value.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li>Any
+ <strong>objectOrValue</strong>
+          :
+          <div class='force-inline'>
+            <p>A deeply nested object or a value.</p>
+
+          </div>
+        </li>
+        <li>Rules
+ <strong>rules</strong>
+          :
+          <div class='force-inline'>
+            <p>Validation rules.</p>
+
+          </div>
+        </li>
+        <li>Options
+ <strong>options</strong>
+          :
+          <div class='force-inline'>
+            <p>Additional options.</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code>(
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+|
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>
+)
+</code>
+      :
+      <div class='force-inline'>
+        <p>If an object was validated, an object containing errors for each key is returned. A single error is returned if a single value was validated.</p>
+
+      </div>
+    <h4>Examples</h4>
+<pre class='overflow-auto'><span class="hljs-keyword">var</span> object = {
+    emailAddress: <span class="hljs-string">"example@example.com"</span>,
+    password: <span class="hljs-string">""</span>
+}
+<span class="hljs-keyword">var</span> rules = {
+    emailAddress:{
+        validate:<span class="hljs-literal">true</span>,
+        email:<span class="hljs-literal">true</span>,
+        required:<span class="hljs-literal">true</span>,
+    }
+    password:{
+        validate:<span class="hljs-literal">true</span>,
+        required:<span class="hljs-literal">true</span>,
+    }
+};
+validate(object, rules);
+<span class="hljs-comment">// Returns {</span>
+<span class="hljs-comment">//     email:true,</span>
+<span class="hljs-comment">//     password: "This field is required."</span>
+<span class="hljs-comment">// }</span></pre>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='Validator' class='mt0'>
+    Validator<span class='gray'>(value, options)</span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>A function that validates a given value.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li>Any
+ <strong>value</strong>
+          :
+          <div class='force-inline'>
+            <p>The value to validate.</p>
+
+          </div>
+        </li>
+        <li>Any
+ <strong>options</strong>
+          :
+          <div class='force-inline'>
+            <p>The options specific to this validator. This will usually be a boolean of true, but a more descriptive object can be used.</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code>(
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+|
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>
+)
+</code>
+      :
+      <div class='force-inline'>
+        <p>If the value passes the validator, a boolean of true will be returned. If the value did not pass the validator, a boolean of false or a string containing an error message will be returned.</p>
+
+      </div>
+</section>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
